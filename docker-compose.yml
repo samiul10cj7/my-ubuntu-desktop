@@ -3,7 +3,8 @@ services:
     build: .
     container_name: ubuntu
     ports:
-      - "6901:6901"
+      - "6901:6901" # For the web browser
+      - "5901:5901" # For the VNC Viewer
     environment:
       - VNC_PW=password
     restart: always
