@@ -8,4 +8,4 @@ services:
     environment:
       - VNC_PW=password
     restart: always
-    shm_size: '512m'
+    shm_size: '512m'If 
