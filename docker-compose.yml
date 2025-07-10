@@ -3,10 +3,9 @@ services:
     build: .
     container_name: ubuntu
     ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
+      - 8006:6901
     environment:
       - VNC_PW=password
     restart: always
-    shm_size: '512m'If 
+    shm_size: '512m'
+    stop_grace_period: 1m
