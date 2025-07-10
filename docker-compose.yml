@@ -1,0 +1,10 @@
+services:
+  ubuntu-desktop:
+    build: .
+    container_name: ubuntu
+    ports:
+      - "6901:6901"
+    environment:
+      - VNC_PW=password
+    restart: always
+    shm_size: '512m'
