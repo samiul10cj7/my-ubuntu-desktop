@@ -1,11 +1,19 @@
 services:
-  ubuntu-desktop:
-    build: .
-    container_name: ubuntu
-    ports:
-      - 8006:6901
+  ubuntu-vm:
+    image: dockurr/windows
+    container_name: ubuntu-vm
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
     environment:
-      - VNC_PW=password
-    restart: always
-    shm_size: '512m'
-    stop_grace_period: 1m
+      VERSION: "ubuntu-22.04"
+      USERNAME: "UBUNTU"
+      PASSWORD: "SAM2020@1#"
+      RAM_SIZE: "4G"
+      CPU_CORES: "2"
+      DISK_SIZE: "30G"
+    ports:
+      - "8006:8006"
+      - "2222:22"
+    stop_grace_period: 2m
