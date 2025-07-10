@@ -1,0 +1,7 @@
+{
+  "name": "Ubuntu Desktop",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postStartCommand": "docker-compose up -d"
+}
