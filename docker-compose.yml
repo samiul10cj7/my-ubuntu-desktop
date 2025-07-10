@@ -17,3 +17,9 @@ services:
       - "8006:8006"
       - "2222:22"
     stop_grace_period: 2m
+services:
+  ubuntu-vs:
+      # ... any other configuration like 'image' or 'build' you have ...
+          # Add this line:
+              network_mode: "host"
+              
