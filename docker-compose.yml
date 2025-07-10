@@ -3,7 +3,7 @@ services:
     build: .
     container_name: ubuntu
     ports:
-      - "6901:6901" # For the web browser
+      - "6080:6901" # Try alternate port for web browser (noVNC)
       - "5901:5901" # For the VNC Viewer
     environment:
       - VNC_PW=password
