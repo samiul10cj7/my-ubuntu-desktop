@@ -23,4 +23,4 @@ RUN apt-get update && apt-get install -y anydesk
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Switch back to the default non-root user that Kasm uses to run the desktop
-USER kasm-user
+USER LUIMAS
